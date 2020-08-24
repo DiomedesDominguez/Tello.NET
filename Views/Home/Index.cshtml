@@ -3,6 +3,52 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Welcome Tello auto flight control</h1>
+    Introduce the commands you want to use every time the Tello start up.
+</div>
+
+<div class="row">
+    
+    <div class="col">
+        <label for="txtCommands">List of Commands</label>
+    <textarea id="txtCommands" class="form-control" readonly cols="50" rows="25">
+takeoff = Auto takeoff.
+land =  Auto landing.
+streamon =  Enable video stream.
+streamoff =  Disable video stream.
+stop = Hovers in the air.
+speed x = Set speed to “x” cm/s. x = 10-100
+emergency =  Stop motors immediately.
+up x =  Ascend to “x” cm. x = 20-500
+down x =  down “x” Descend to “x” cm. x = 20-500
+left x =  Fly left for “x” cm.“x” = 20-500
+right x =  Fly right for “x” cm. “x” = 20-500
+forward x = Fly forward for “x” cm. “x” = 20-500
+back x =  Fly backward for “x” cm. “x” = 20-500
+cw x =  Rotate “x” degrees clockwise. “x” = 1-360
+ccw x =  Rotate “x” degrees counterclockwise. “x” = 1-360
+    </textarea>
+    </div>
+    <div class="col">
+        <label for="txtSetCommands">Your commands</label>
+    <textarea id="txtSetCommands" class="form-control" rows="25" cols="50">
+command
+streamon
+speed 20
+takeoff
+up 400
+forward 45
+cw 360
+back 45
+down 400
+land
+    </textarea>
+    </div>
+</div>
+<div class="row">
+    
+    <div class="col">
+    <button type="button" class="btn btn-primary">Save</button>
+    <button type="button" class="btn btn-secondary">Manual execution</button>
+    </div>
 </div>
